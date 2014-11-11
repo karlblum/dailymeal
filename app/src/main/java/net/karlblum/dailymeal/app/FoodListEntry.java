@@ -7,8 +7,14 @@ public class FoodListEntry {
 
     private String placeName;
     private String dailyOffer;
+    private boolean favourite = false;
 
-    public FoodListEntry() {
+    public boolean isFavourite() {
+        return favourite;
+    }
+
+    public void setFavourite(boolean favourite) {
+        this.favourite = favourite;
     }
 
     public String getDailyOffer() {
