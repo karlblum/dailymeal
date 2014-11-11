@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- indigo https://gist.github.com/daniellevass/b0b8cfa773488e138037 -->
+    <color name="md_indigo_50">#e8eaf6</color>
+    <color name="md_indigo_100">#c5cae9</color>
+    <color name="md_indigo_200">#9fa8da</color>
+    <color name="md_indigo_300">#7986cb</color>
+    <color name="md_indigo_400">#5c6bc0</color>
+    <color name="md_indigo_500">#3f51b5</color>
+    <color name="md_indigo_600">#3949ab</color>
+    <color name="md_indigo_700">#303f9f</color>
+    <color name="md_indigo_800">#283593</color>
+    <color name="md_indigo_900">#1a237e</color>
+    <color name="md_indigo_A100">#8c9eff</color>
+    <color name="md_indigo_A200">#536dfe</color>
+    <color name="md_indigo_A400">#3d5afe</color>
+    <color name="md_indigo_A700">#304ffe</color>
+
+</resources>
