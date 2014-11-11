@@ -18,6 +18,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="net.karlblum.dailymeal.app.SettingsActivity"
+            android:label="@string/title_activity_settings"
+            android:parentActivityName="net.karlblum.dailymeal.app.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="net.karlblum.dailymeal.app.MainActivity" />
+        </activity>
     </application>
 
 </manifest>

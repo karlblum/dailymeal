@@ -3,8 +3,11 @@ package net.karlblum.dailymeal.app;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
+import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 /**
  * Created by Karl on 11.11.2014.
@@ -43,6 +46,15 @@ public class FoodViewAdapter extends RecyclerView.Adapter<FoodViewAdapter.ViewHo
 
         TextView offerTextView = (TextView)viewHolder.mCardView.findViewById(R.id.card_offer_textview);
         offerTextView.setText(mDataset[position].getDailyOffer());
+
+        ImageButton favButton = (ImageButton)viewHolder.mCardView.findViewById(R.id.favorite);
+        favButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast t = Toast.makeText(view.getContext(),"Lemmik lisatud",Toast.LENGTH_SHORT);
+                t.show();
+            }
+        });
 
     }
 
