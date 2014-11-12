@@ -37,19 +37,27 @@ public class FoodFragment extends Fragment {
     }
 
     @Override
+    public void onResume() {
+        super.onResume();
+        refreshData();
+    }
+
+    @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_food, container, false);
-
         RecyclerView foodView = (RecyclerView)rootView.findViewById(R.id.recycler_view_food);
 
         foodView.setLayoutManager(new LinearLayoutManager(getActivity()));
         foodViewAdapter =  new FoodViewAdapter();
         foodView.setAdapter(foodViewAdapter);
+        refreshData();
+        return rootView;
+    }
 
+    public void refreshData(){
         new FetchFoodDataTask().execute(foodViewAdapter);
 
-        return rootView;
     }
 
 
@@ -86,14 +94,21 @@ public class FoodFragment extends Fragment {
                     String place = element.select("a.diner_link").first().text();
                     if(offer == null || offer.contains("info puudub")){
                         continue;
-                    } else if(place == null || place.contains("Filtreerimiseks")){
-                        continue;
                     }
 
-                    FoodListEntry foodListEntry = new FoodListEntry();
-                    foodListEntry.setDailyOffer(offer);
-                    foodListEntry.setPlaceName(place);
-                    result.add(foodListEntry);
+                    if(place != null &&( place.contains("Feel Good")
+                            || place.contains("Kapriis")
+                            || place.contains("Pierre")
+                            || place.contains("Suudlevad")
+                            || place.contains("Truffe")
+                            || place.contains("Ülikooli Kohvik"))){
+                        FoodListEntry foodListEntry = new FoodListEntry();
+                        foodListEntry.setDailyOffer(offer);
+                        foodListEntry.setPlaceName(place);
+                        result.add(foodListEntry);
+                    }
+
+
                 }
 
             } catch (IOException e) {

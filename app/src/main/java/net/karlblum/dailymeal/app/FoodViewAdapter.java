@@ -1,18 +1,10 @@
 package net.karlblum.dailymeal.app;
 
-import android.content.Context;
-import android.content.SharedPreferences;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
-import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageButton;
 import android.widget.TextView;
-import android.widget.Toast;
-
-import java.util.HashSet;
-import java.util.Set;
 
 /**
  * Created by Karl on 11.11.2014.
@@ -53,6 +45,7 @@ public class FoodViewAdapter extends RecyclerView.Adapter<FoodViewAdapter.ViewHo
         TextView offerTextView = (TextView)viewHolder.mCardView.findViewById(R.id.card_offer_textview);
         offerTextView.setText(item.getDailyOffer());
 
+        /*
         ImageButton favButton = (ImageButton)viewHolder.mCardView.findViewById(R.id.favorite);
         if(item.isFavourite()){
             favButton.setSelected(true);
@@ -87,6 +80,7 @@ public class FoodViewAdapter extends RecyclerView.Adapter<FoodViewAdapter.ViewHo
                 editor.commit();
             }
         });
+        */
 
     }
 
