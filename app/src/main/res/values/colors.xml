@@ -15,5 +15,12 @@
     <color name="md_indigo_A200">#536dfe</color>
     <color name="md_indigo_A400">#3d5afe</color>
     <color name="md_indigo_A700">#304ffe</color>
+    <color name="pink_A200">#ff4081</color>
+
+    <!-- general text colors -->
+    <color name="text">#212121</color>
+    <color name="secondary">#727272</color>
+    <color name="hint">#B8B8B8</color>
+    <color name="dividers">#DADADA</color>
 
 </resources>
